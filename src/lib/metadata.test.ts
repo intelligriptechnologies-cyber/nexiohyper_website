@@ -48,6 +48,8 @@ describe("buildMetadata", () => {
       path: "/about",
     });
     expect(metadata.openGraph?.url).toBe(`${siteConfig.url}/about`);
-    expect(metadata.twitter?.card).toBe("summary_large_image");
+    expect((metadata.twitter as { card?: string } | null)?.card).toBe(
+      "summary_large_image"
+    );
   });
 });
