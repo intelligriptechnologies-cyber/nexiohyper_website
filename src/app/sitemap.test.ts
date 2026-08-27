@@ -3,9 +3,9 @@ import sitemap from "./sitemap";
 import { siteConfig } from "@/lib/site-config";
 
 describe("sitemap", () => {
-  it("includes all 5 static pages and all 4 service pages", () => {
+  it("includes all 6 static pages and all 4 service pages", () => {
     const entries = sitemap();
-    expect(entries).toHaveLength(9);
+    expect(entries).toHaveLength(10);
   });
 
   it("gives the homepage the highest priority", () => {
@@ -14,9 +14,10 @@ describe("sitemap", () => {
     expect(home?.priority).toBe(1);
   });
 
-  it("includes each service detail URL", () => {
+  it("includes each service detail URL and the products page", () => {
     const entries = sitemap();
     const urls = entries.map((entry) => entry.url);
     expect(urls).toContain(`${siteConfig.url}/services/cloud-devops`);
+    expect(urls).toContain(`${siteConfig.url}/products`);
   });
 });

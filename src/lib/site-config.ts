@@ -33,6 +33,7 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
+    { label: "Products", href: "/products" },
     { label: "Industries", href: "/industries" },
     { label: "Contact", href: "/contact" },
   ],
@@ -40,5 +41,5 @@ export const siteConfig = {
 
 export function formatAddress(config: typeof siteConfig = siteConfig): string {
   const { address } = config;
-  return `${address.line1}, ${address.line2}, ${address.city} – ${address.postalCode}`;
+  return `${address.line1}, ${address.line2}, ${address.city} - ${address.postalCode}`;
 }

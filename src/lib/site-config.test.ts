@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { siteConfig, formatAddress } from "./site-config";
+import { formatAddress, siteConfig } from "./site-config";
 
 describe("siteConfig", () => {
   it("has the correct NAP (name/address/phone) data", () => {
@@ -17,12 +17,16 @@ describe("siteConfig", () => {
     expect(siteConfig.keywords.some((k) => k.includes("India"))).toBe(true);
     expect(siteConfig.keywords.length).toBeGreaterThan(5);
   });
+
+  it("includes Products in the primary navigation", () => {
+    expect(siteConfig.nav.map((item) => item.label)).toContain("Products");
+  });
 });
 
 describe("formatAddress", () => {
   it("formats the full postal address on one line", () => {
     expect(formatAddress()).toBe(
-      "1st Floor, New Annex Building, Arch Bishop's House, Satyanagar, Bhubaneswar – 751007"
+      "1st Floor, New Annex Building, Arch Bishop's House, Satyanagar, Bhubaneswar - 751007"
     );
   });
 });
