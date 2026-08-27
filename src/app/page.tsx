@@ -110,12 +110,15 @@ export default function HomePage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry, index) => (
               <Reveal key={industry.slug} delay={70 * index}>
-                <div className="surface-panel rounded-2xl p-5">
+                <Link
+                  href={`/industries/${industry.slug}`}
+                  className="surface-panel block rounded-2xl p-5 transition-transform duration-200 hover:-translate-y-1 hover:border-teal-300"
+                >
                   <h3 className="text-xl font-semibold text-slate-900">{industry.name}</h3>
                   <p className="marketing-support mt-2 text-slate-600">
                     {industry.description}
                   </p>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>

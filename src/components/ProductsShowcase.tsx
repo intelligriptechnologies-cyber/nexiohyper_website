@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import type { Product } from "@/lib/products-data";
 import { getDefaultProductSlug, getProductBySlug } from "@/lib/product-browser";
 
@@ -101,6 +102,12 @@ export function ProductsShowcase({ products }: ProductsShowcaseProps) {
             <p className="marketing-body mt-5 max-w-3xl text-slate-600">
               {selectedProduct.description}
             </p>
+            <Link
+              href={`/products/${selectedProduct.slug}`}
+              className="mt-6 inline-flex rounded-full border border-teal-200 bg-teal-50 px-5 py-2.5 text-sm font-semibold text-teal-800 transition-colors duration-200 hover:border-teal-300 hover:bg-teal-100"
+            >
+              View product details
+            </Link>
           </div>
           <div className="rounded-[1.5rem] bg-slate-900 px-5 py-4 text-white lg:w-[19rem] lg:flex-none">
             <p className="marketing-caption font-semibold uppercase tracking-[0.2em] text-teal-200">

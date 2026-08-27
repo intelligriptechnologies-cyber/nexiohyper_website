@@ -194,3 +194,10 @@
  GET /services/data-ai-analytics 200 in 166ms (next.js: 93ms, generate-params: 11ms, application-code: 62ms)
  GET /services/it-consulting-staffing 200 in 91ms (next.js: 15ms, generate-params: 12ms, application-code: 64ms)
  GET /services/cloud-devops 200 in 85ms (next.js: 16ms, generate-params: 11ms, application-code: 58ms)
+✓ Compiled in 559ms
+ GET /services/cloud-devops 200 in 842ms (next.js: 209ms, generate-params: 10ms, application-code: 623ms)
+ GET /services/cloud-devops 200 in 118ms (next.js: 8ms, generate-params: 0.1ms, application-code: 110ms)
+ GET / 200 in 244ms (next.js: 145ms, application-code: 99ms)
+ GET /industries/startups-smes 200 in 3.5s (next.js: 1943ms, generate-params: 1556ms, application-code: 51ms)
+○ Compiling /products/[slug] ...
+ GET /products/nexio-academy 200 in 5.7s (next.js: 4.7s, generate-params: 888ms, application-code: 41ms)

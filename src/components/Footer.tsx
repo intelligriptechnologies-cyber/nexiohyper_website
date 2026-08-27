@@ -129,7 +129,7 @@ export function Footer() {
               {products.map((product) => (
                 <li key={product.slug}>
                   <Link
-                    href="/products"
+                    href={`/products/${product.slug}`}
                     className="transition-colors duration-200 hover:text-teal-700"
                   >
                     {product.name}
@@ -149,7 +149,7 @@ export function Footer() {
               {industries.map((industry) => (
                 <li key={industry.slug}>
                   <Link
-                    href="/industries"
+                    href={`/industries/${industry.slug}`}
                     className="transition-colors duration-200 hover:text-teal-700"
                   >
                     {industry.name}

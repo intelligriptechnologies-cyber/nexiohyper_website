@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 import { industries } from "@/lib/industries-data";
 
@@ -26,10 +27,14 @@ export default function IndustriesPage() {
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((industry) => (
-            <div key={industry.slug} className="surface-panel rounded-[1.5rem] p-6">
+            <Link
+              key={industry.slug}
+              href={`/industries/${industry.slug}`}
+              className="surface-panel block rounded-[1.5rem] p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-teal-300"
+            >
               <h2 className="text-xl font-semibold text-slate-900">{industry.name}</h2>
               <p className="marketing-support mt-3 text-slate-600">{industry.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

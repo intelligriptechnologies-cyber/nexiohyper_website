@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { products } from "./products-data";
+import { getProductBySlug, products } from "./products-data";
 
 describe("products", () => {
   it("contains the six Nexio Suite products", () => {
@@ -17,6 +17,7 @@ describe("products", () => {
 
   it("gives each product a description, modules, and target businesses", () => {
     for (const product of products) {
+      expect(product.purpose.length).toBeGreaterThan(20);
       expect(product.highlightLabel.length).toBeGreaterThan(3);
       expect(product.description.length).toBeGreaterThan(40);
       expect(product.workflowFocus.length).toBeGreaterThan(30);
@@ -28,5 +29,15 @@ describe("products", () => {
         expect(card.description.length).toBeGreaterThan(20);
       }
     }
+  });
+});
+
+describe("getProductBySlug", () => {
+  it("finds a product by slug", () => {
+    expect(getProductBySlug("nexio-stock")?.name).toBe("Nexio Stock");
+  });
+
+  it("returns undefined for an unknown slug", () => {
+    expect(getProductBySlug("does-not-exist")).toBeUndefined();
   });
 });
