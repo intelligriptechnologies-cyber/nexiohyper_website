@@ -201,3 +201,10 @@
  GET /industries/startups-smes 200 in 3.5s (next.js: 1943ms, generate-params: 1556ms, application-code: 51ms)
 ○ Compiling /products/[slug] ...
  GET /products/nexio-academy 200 in 5.7s (next.js: 4.7s, generate-params: 888ms, application-code: 41ms)
+ GET /products 200 in 131ms (next.js: 88ms, application-code: 43ms)
+ GET /services 200 in 89ms (next.js: 57ms, application-code: 31ms)
+ GET / 200 in 39ms (next.js: 7ms, application-code: 32ms)
+ GET /about 200 in 212ms (next.js: 116ms, application-code: 96ms)
+ GET / 200 in 74ms (next.js: 10ms, application-code: 64ms)
+ GET /contact 200 in 76ms (next.js: 36ms, application-code: 40ms)
+ GET / 200 in 81ms (next.js: 13ms, application-code: 68ms)
