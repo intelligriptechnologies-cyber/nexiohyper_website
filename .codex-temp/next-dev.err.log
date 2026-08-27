@@ -1,0 +1,328 @@
+[browser] Image with src "/icons/nh_flat_logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  [90m4 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/components/Header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/components/Footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mGoogleAnalytics[0m } [36mfrom[0m [32m"@/components/GoogleAnalytics"[0m;
+  [90m8 |[0m [36mimport[0m { [33mJsonLd[0m } [36mfrom[0m [32m"@/components/JsonLd"[0m;
+  [90m9 |[0m [36mimport[0m { buildMetadata } [36mfrom[0m [32m"@/lib/metadata"[0m;
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  4 | import "./globals.css";
+  5 | import { Header } from "@/components/Header";
+> 6 | import { Footer } from "@/components/Footer";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+  8 | import { JsonLd } from "@/components/JsonLd";
+  9 | import { buildMetadata } from "@/lib/metadata";
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/layout.tsx:6:1
+Error: Module not found: Can't resolve '@/components/Footer'
+  4 | import "./globals.css";
+  5 | import { Header } from "@/components/Header";
+> 6 | import { Footer } from "@/components/Footer";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+  8 | import { JsonLd } from "@/components/JsonLd";
+  9 | import { buildMetadata } from "@/lib/metadata";
+
+Import map: aliased to relative './src/components/Footer' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

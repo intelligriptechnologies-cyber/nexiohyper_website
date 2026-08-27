@@ -11,21 +11,28 @@ export const metadata: Metadata = buildMetadata({
 
 export default function IndustriesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <h1 className="text-4xl font-bold text-slate-900">Industries We Serve</h1>
-      <p className="mt-4 max-w-2xl text-slate-600">
-        NexioHyper works across sectors, applying the same disciplined engineering
-        approach to each — adapted to the compliance, scale, and workflow needs of your
-        industry.
-      </p>
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {industries.map((industry) => (
-          <div key={industry.slug} className="rounded-xl border border-slate-200 p-6">
-            <h2 className="text-lg font-semibold text-slate-900">{industry.name}</h2>
-            <p className="mt-2 text-sm text-slate-600">{industry.description}</p>
-          </div>
-        ))}
+    <section className="page-section surface-soft">
+      <div className="content-shell section-pad-compact">
+        <div className="max-w-4xl">
+          <p className="marketing-kicker text-teal-700">Industries</p>
+          <h1 className="marketing-title mt-5 font-bold text-slate-900">
+            Industries We Serve
+          </h1>
+          <p className="marketing-body mt-5 max-w-3xl text-slate-600">
+            NexioHyper works across sectors, applying the same disciplined engineering
+            approach to each, adapted to the compliance, scale, and workflow needs of your
+            industry.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {industries.map((industry) => (
+            <div key={industry.slug} className="surface-panel rounded-[1.5rem] p-6">
+              <h2 className="text-xl font-semibold text-slate-900">{industry.name}</h2>
+              <p className="marketing-support mt-3 text-slate-600">{industry.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

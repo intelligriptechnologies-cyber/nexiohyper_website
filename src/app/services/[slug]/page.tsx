@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/metadata";
 import { getServiceBySlug, services } from "@/lib/services-data";
-import { JsonLd } from "@/components/JsonLd";
-import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/json-ld";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -32,44 +32,52 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   if (!service) notFound();
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-      <JsonLd
-        data={serviceJsonLd({
-          name: service.name,
-          description: service.description,
-          path: `/services/${service.slug}`,
-        })}
-      />
-      <JsonLd
-        data={breadcrumbJsonLd([
-          { name: "Home", path: "/" },
-          { name: "Services", path: "/services" },
-          { name: service.name, path: `/services/${service.slug}` },
-        ])}
-      />
-      <nav className="text-sm text-slate-500">
-        <Link href="/services" className="hover:text-teal-600">
-          Services
-        </Link>{" "}
-        / {service.name}
-      </nav>
-      <h1 className="mt-2 text-4xl font-bold text-slate-900">{service.name}</h1>
-      <p className="mt-6 text-lg text-slate-700">{service.description}</p>
-      <h2 className="mt-10 text-2xl font-semibold text-slate-900">What you get</h2>
-      <ul className="mt-4 space-y-2 text-slate-700">
-        {service.benefits.map((benefit) => (
-          <li key={benefit} className="flex gap-2">
-            <span className="text-teal-500">✓</span>
-            <span>{benefit}</span>
-          </li>
-        ))}
-      </ul>
-      <Link
-        href="/contact"
-        className="mt-10 inline-block rounded-full bg-teal-500 px-8 py-3 font-semibold text-slate-950 hover:bg-teal-400"
-      >
-        Discuss Your Project
-      </Link>
-    </div>
+    <section className="page-section surface-soft">
+      <div className="content-shell section-pad-compact">
+        <JsonLd
+          data={serviceJsonLd({
+            name: service.name,
+            description: service.description,
+            path: `/services/${service.slug}`,
+          })}
+        />
+        <JsonLd
+          data={breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: service.name, path: `/services/${service.slug}` },
+          ])}
+        />
+        <div className="max-w-4xl">
+          <nav className="text-base text-slate-500">
+            <Link href="/services" className="hover:text-teal-600">
+              Services
+            </Link>{" "}
+            / {service.name}
+          </nav>
+          <h1 className="marketing-title mt-4 font-bold text-slate-900">{service.name}</h1>
+          <p className="marketing-body mt-6 max-w-3xl text-slate-700">{service.description}</p>
+        </div>
+        <div className="mt-12 max-w-4xl rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-[0_20px_50px_rgba(15,23,42,0.06)]">
+          <h2 className="text-[1.9rem] font-semibold tracking-tight text-slate-900">
+            What you get
+          </h2>
+          <ul className="marketing-support mt-5 space-y-3 text-slate-700">
+            {service.benefits.map((benefit) => (
+              <li key={benefit} className="flex gap-3">
+                <span className="text-teal-500">✓</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+          <Link
+            href="/contact"
+            className="mt-10 inline-block rounded-full bg-teal-500 px-8 py-3.5 font-semibold text-slate-950 hover:bg-teal-400"
+          >
+            Discuss Your Project
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

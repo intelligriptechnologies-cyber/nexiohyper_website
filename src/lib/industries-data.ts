@@ -42,3 +42,7 @@ export const industries: Industry[] = [
       "Reliable, well-governed digital systems for government and public-sector organizations.",
   },
 ];
+
+export function getIndustryBySlug(slug: string): Industry | undefined {
+  return industries.find((industry) => industry.slug === slug);
+}

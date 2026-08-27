@@ -38,12 +38,12 @@ body {
 
 .content-shell {
   margin-inline: auto;
-  width: min(100% - 2rem, 84rem);
+  width: min(100% - 2rem, 86rem);
 }
 
 .content-shell-wide {
   margin-inline: auto;
-  width: min(100% - 2rem, 96rem);
+  width: min(100% - 2rem, 100rem);
 }
 
 .section-pad {
@@ -94,6 +94,45 @@ body {
   pointer-events: none;
 }
 
+.marketing-kicker {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.marketing-title {
+  font-size: clamp(2.75rem, 4vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.marketing-section-title {
+  font-size: clamp(2.15rem, 2.6vw, 3.15rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.marketing-lead {
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+
+.marketing-body {
+  font-size: 1.075rem;
+  line-height: 1.85;
+}
+
+.marketing-support {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.marketing-caption {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
 .reveal {
   transition:
     opacity var(--transition-base),
@@ -128,20 +167,38 @@ body {
 @media (min-width: 640px) {
   .content-shell,
   .content-shell-wide {
-    width: min(100% - 3rem, 84rem);
+    width: min(100% - 3rem, 86rem);
   }
 
   .content-shell-wide {
-    width: min(100% - 3rem, 96rem);
+    width: min(100% - 3rem, 100rem);
+  }
+
+  .marketing-kicker {
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 1280px) {
   .content-shell {
-    width: min(100% - 5rem, 84rem);
+    width: min(100% - 5rem, 92rem);
   }
 
   .content-shell-wide {
-    width: min(100% - 5rem, 96rem);
+    width: min(100% - 5rem, 108rem);
+  }
+
+  .marketing-support {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .content-shell {
+    width: min(100% - 6rem, 96rem);
+  }
+
+  .content-shell-wide {
+    width: min(100% - 6rem, 114rem);
   }
 }

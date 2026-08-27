@@ -12,28 +12,37 @@ export const metadata: Metadata = buildMetadata({
 
 export default function ServicesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <h1 className="text-4xl font-bold text-slate-900">Our Services</h1>
-      <p className="mt-4 max-w-2xl text-slate-600">
-        From the first line of code to production-scale cloud infrastructure,
-        NexioHyper delivers end-to-end IT services for clients in Bhubaneswar, across
-        India, and worldwide.
-      </p>
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {services.map((service) => (
-          <Link
-            key={service.slug}
-            href={`/services/${service.slug}`}
-            className="rounded-xl border border-slate-200 p-6 transition hover:border-teal-400 hover:shadow-lg"
-          >
-            <h2 className="text-xl font-semibold text-slate-900">{service.name}</h2>
-            <p className="mt-2 text-sm text-slate-600">{service.shortDescription}</p>
-            <span className="mt-4 inline-block text-sm font-semibold text-teal-600">
-              Learn more →
-            </span>
-          </Link>
-        ))}
+    <section className="page-section surface-soft">
+      <div className="content-shell section-pad-compact">
+        <div className="max-w-4xl">
+          <p className="marketing-kicker text-teal-700">Services</p>
+          <h1 className="marketing-title mt-5 font-bold text-slate-900">Our Services</h1>
+          <p className="marketing-body mt-5 max-w-3xl text-slate-600">
+            From the first line of code to production-scale cloud infrastructure,
+            NexioHyper delivers end-to-end IT services for clients in Bhubaneswar, across
+            India, and worldwide.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {services.map((service) => (
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
+              className="surface-panel-strong rounded-[1.5rem] p-7 transition hover:-translate-y-1 hover:border-teal-300"
+            >
+              <h2 className="text-[1.55rem] font-semibold tracking-tight text-slate-900">
+                {service.name}
+              </h2>
+              <p className="marketing-support mt-3 text-slate-600">
+                {service.shortDescription}
+              </p>
+              <span className="mt-5 inline-block text-base font-semibold text-teal-700">
+                Learn more &rarr;
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

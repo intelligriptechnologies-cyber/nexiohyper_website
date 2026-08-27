@@ -10,6 +10,9 @@ describe("siteConfig", () => {
     expect(siteConfig.social.linkedin).toBe(
       "https://www.linkedin.com/company/nexiohyper"
     );
+    expect(siteConfig.social.x).toBe("https://x.com/nexiohyper");
+    expect(siteConfig.social.youtube).toBe("https://www.youtube.com/@nexiohyper");
+    expect(siteConfig.social.facebook).toBe("https://www.facebook.com/nexiohyper");
   });
 
   it("includes local, national, and global keywords", () => {
@@ -20,6 +23,16 @@ describe("siteConfig", () => {
 
   it("includes Products in the primary navigation", () => {
     expect(siteConfig.nav.map((item) => item.label)).toContain("Products");
+  });
+
+  it("exposes grouped footer links and legal actions", () => {
+    expect(siteConfig.footerGroups).toHaveLength(3);
+    expect(siteConfig.footerGroups.map((group) => group.heading)).toEqual([
+      "Services",
+      "Company",
+      "Connect",
+    ]);
+    expect(siteConfig.legalLinks.map((item) => item.label)).toEqual(["Privacy", "Terms"]);
   });
 });
 
