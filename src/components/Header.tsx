@@ -50,7 +50,7 @@ export function Header() {
             } motion-safe:transition-[width,height] motion-safe:duration-200`}
           >
             <Image
-              src="/icons/nh_flat_logo.png"
+              src="/icons/nh_flat_logo_20260828.png"
               alt={`${siteConfig.name} logo`}
               width={340}
               height={85}

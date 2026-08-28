@@ -16,7 +16,7 @@ export function buildMetadata({
 }: BuildMetadataInput): Metadata {
   const url = `${siteConfig.url}${path === "/" ? "" : path}`;
   const fullTitle = path === "/" ? title : `${title} | ${siteConfig.name}`;
-  const ogImage = `${siteConfig.url}/icons/nh_logo_gradient.png`;
+  const ogImage = `${siteConfig.url}/icons/nh_logo_gradient_20260828.png`;
 
   return {
     title: fullTitle,

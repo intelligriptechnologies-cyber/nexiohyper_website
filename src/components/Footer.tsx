@@ -53,7 +53,7 @@ export function Footer() {
           <div className="max-w-md">
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="/icons/nh_logo_gradient.png"
+                src="/icons/nh_logo_gradient_20260828.png"
                 alt={`${siteConfig.name} logo`}
                 width={320}
                 height={96}
