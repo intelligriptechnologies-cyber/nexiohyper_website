@@ -52,8 +52,8 @@ export function Header() {
             <Image
               src="/icons/nh_flat_logo_20260828.png"
               alt={`${siteConfig.name} logo`}
-              width={340}
-              height={85}
+              width={865}
+              height={288}
               className="h-full w-full object-contain object-left"
               preload
             />

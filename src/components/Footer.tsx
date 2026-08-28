@@ -55,9 +55,9 @@ export function Footer() {
               <Image
                 src="/icons/nh_logo_gradient_20260828.png"
                 alt={`${siteConfig.name} logo`}
-                width={320}
-                height={96}
-                className="h-auto w-48 sm:w-56"
+                width={587}
+                height={425}
+                className="h-auto w-36 sm:w-40"
               />
             </Link>
             <p className="mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-teal-700">
@@ -68,14 +68,6 @@ export function Footer() {
               systems, clear workflows, and dependable implementation.
             </p>
             <div className="mt-5 space-y-2.5 text-[0.98rem] leading-7 text-slate-600">
-              <p>
-                <span className="mr-2 font-semibold text-slate-900">Location:</span>
-                <span className="inline-block align-top">
-                  <span className="block">1st Floor, New Annex Building,</span>
-                  <span className="block">Arch Bishop&apos;s House,</span>
-                  <span className="block">Satyanagar, Bhubaneswar - 751007</span>
-                </span>
-              </p>
               <p>
                 <span className="mr-2 font-semibold text-slate-900">Contact us:</span>
                 <a
@@ -193,8 +185,7 @@ export function Footer() {
             ))}
           </div>
           <p className="sm:text-right">
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved. Built
-            from Bhubaneswar for clients across India and beyond.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
         </div>
       </div>
