@@ -34,7 +34,7 @@ describe("buildMetadata", () => {
     const metadata = buildMetadata({
       title: "Cloud & DevOps",
       description: "Cloud services",
-      path: "/services/cloud-devops",
+      path: "/cloud-devops",
       keywords: ["cloud migration services India"],
     });
     expect(metadata.keywords).toContain("cloud migration services India");
@@ -51,5 +51,16 @@ describe("buildMetadata", () => {
     expect((metadata.twitter as { card?: string } | null)?.card).toBe(
       "summary_large_image"
     );
+  });
+
+  it("supports article Open Graph metadata", () => {
+    const metadata = buildMetadata({
+      title: "A blog post",
+      description: "Post summary",
+      path: "/blog/a-blog-post",
+      openGraphType: "article",
+    });
+    expect(metadata.alternates?.canonical).toBe(`${siteConfig.url}/blog/a-blog-post`);
+    expect((metadata.openGraph as { type?: string } | null)?.type).toBe("article");
   });
 });

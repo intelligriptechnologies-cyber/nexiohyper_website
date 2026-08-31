@@ -5,6 +5,7 @@ export const siteConfig = {
     "NexioHyper is an IT solutions company in Bhubaneswar, Odisha, delivering custom software development, IT consulting & staffing, cloud & DevOps, and data, AI & analytics services to clients across India and globally.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.nexiohyper.com",
   phone: "+91 93489 74524",
+  whatsapp: "+91 70088 92382",
   emails: ["nexiohyper@gmail.com", "connect@nexiohyper.com"],
   primaryContactEmail: "connect@nexiohyper.com",
   address: {
@@ -38,6 +39,7 @@ export const siteConfig = {
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Products", href: "/products" },
+    { label: "Blog", href: "/blog" },
     { label: "Industries", href: "/industries" },
     { label: "Contact", href: "/contact" },
   ],
@@ -53,6 +55,7 @@ export const siteConfig = {
       heading: "Company",
       links: [
         { label: "About", href: "/about" },
+        { label: "Blog", href: "/blog" },
         { label: "Industries", href: "/industries" },
       ],
     },

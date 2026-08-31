@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/json-ld";
 import { getIndustryBySlug, industries } from "@/lib/industries-data";
 import { buildMetadata } from "@/lib/metadata";
+import { getIndustryPath } from "@/lib/routes";
 
 interface IndustryPageProps {
   params: Promise<{ slug: string }>;
@@ -24,11 +25,12 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
   const { slug } = await params;
   const industry = getIndustryBySlug(slug);
   if (!industry) return {};
+  const industryPath = getIndustryPath(industry.slug);
 
   return buildMetadata({
     title: industry.name,
     description: industry.description,
-    path: `/industries/${industry.slug}`,
+    path: industryPath,
     keywords: [industry.name, `${industry.name} software solutions`],
   });
 }
@@ -37,6 +39,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
   const { slug } = await params;
   const industry = getIndustryBySlug(slug);
   if (!industry) notFound();
+  const industryPath = getIndustryPath(industry.slug);
 
   return (
     <section className="page-section surface-soft">
@@ -45,7 +48,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
           data={breadcrumbJsonLd([
             { name: "Home", path: "/" },
             { name: "Industries", path: "/industries" },
-            { name: industry.name, path: `/industries/${industry.slug}` },
+            { name: industry.name, path: industryPath },
           ])}
         />
 

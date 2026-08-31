@@ -5,6 +5,7 @@ describe("siteConfig", () => {
   it("has the correct NAP (name/address/phone) data", () => {
     expect(siteConfig.name).toBe("NexioHyper");
     expect(siteConfig.phone).toBe("+91 93489 74524");
+    expect(siteConfig.whatsapp).toBe("+91 70088 92382");
     expect(siteConfig.emails).toContain("nexiohyper@gmail.com");
     expect(siteConfig.emails).toContain("connect@nexiohyper.com");
     expect(siteConfig.social.linkedin).toBe(
@@ -23,6 +24,10 @@ describe("siteConfig", () => {
 
   it("includes Products in the primary navigation", () => {
     expect(siteConfig.nav.map((item) => item.label)).toContain("Products");
+  });
+
+  it("includes Blog in the primary navigation", () => {
+    expect(siteConfig.nav.map((item) => item.label)).toContain("Blog");
   });
 
   it("exposes grouped footer links and legal actions", () => {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
+import { getServicePath } from "@/lib/routes";
 import { services } from "@/lib/services-data";
 
 export const metadata: Metadata = buildMetadata({
@@ -27,7 +28,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <Link
               key={service.slug}
-              href={`/services/${service.slug}`}
+              href={getServicePath(service.slug)}
               className="surface-panel-strong rounded-[1.5rem] p-7 transition hover:-translate-y-1 hover:border-teal-300"
             >
               <h2 className="text-[1.55rem] font-semibold tracking-tight text-slate-900">

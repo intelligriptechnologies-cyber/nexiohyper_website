@@ -1,4 +1,6 @@
 import { siteConfig, formatAddress } from "./site-config";
+import type { BlogPost } from "./blog-data";
+import { getBlogPath } from "./routes";
 
 export function organizationJsonLd() {
   return {
@@ -24,8 +26,44 @@ export function organizationJsonLd() {
 
 export function localBusinessJsonLd() {
   return {
-    ...organizationJsonLd(),
+    "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#localbusiness`,
+    name: siteConfig.name,
+    url: `${siteConfig.url}/contact`,
+    image: `${siteConfig.url}/icons/nh_logo_gradient_20260828.png`,
+    description: siteConfig.description,
+    telephone: siteConfig.phone,
+    email: siteConfig.primaryContactEmail,
+    sameAs: Object.values(siteConfig.social),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: `${siteConfig.address.line1}, ${siteConfig.address.line2}`,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.region,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: siteConfig.address.country,
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: siteConfig.address.city,
+      },
+      {
+        "@type": "Country",
+        name: "India",
+      },
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        telephone: siteConfig.phone,
+        email: siteConfig.primaryContactEmail,
+        areaServed: "IN",
+        availableLanguage: ["en"],
+      },
+    ],
   };
 }
 
@@ -64,6 +102,35 @@ export function serviceJsonLd(input: { name: string; description: string; path: 
       name: siteConfig.name,
       url: siteConfig.url,
     },
+  };
+}
+
+export function articleJsonLd(post: BlogPost) {
+  const url = `${siteConfig.url}${getBlogPath(post.slug)}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.seoDescription,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/icons/nh_logo_gradient_20260828.png`,
+      },
+    },
+    mainEntityOfPage: url,
+    url,
+    image: post.coverImage ? [`${siteConfig.url}${post.coverImage}`] : undefined,
+    keywords: post.tags.join(", "),
   };
 }
 

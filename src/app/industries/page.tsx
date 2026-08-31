@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 import { industries } from "@/lib/industries-data";
+import { getIndustryPath } from "@/lib/routes";
 
 export const metadata: Metadata = buildMetadata({
   title: "Industries We Serve",
@@ -29,7 +30,7 @@ export default function IndustriesPage() {
           {industries.map((industry) => (
             <Link
               key={industry.slug}
-              href={`/industries/${industry.slug}`}
+              href={getIndustryPath(industry.slug)}
               className="surface-panel block rounded-[1.5rem] p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-teal-300"
             >
               <h2 className="text-xl font-semibold text-slate-900">{industry.name}</h2>

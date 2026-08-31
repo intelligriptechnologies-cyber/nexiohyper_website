@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { getLatestPosts } from "@/lib/blog-data";
 import { industries } from "@/lib/industries-data";
+import { getBlogPath, getIndustryPath, getServicePath } from "@/lib/routes";
 import { services } from "@/lib/services-data";
 
 export default function HomePage() {
+  const latestPosts = getLatestPosts(3);
+
   return (
     <>
       <section className="page-section surface-band surface-hero overflow-hidden text-center text-white">
@@ -82,7 +86,7 @@ export default function HomePage() {
             {services.map((service, index) => (
               <Reveal key={service.slug} delay={80 * index}>
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={getServicePath(service.slug)}
                   className="surface-panel-strong block rounded-2xl p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-teal-300"
                 >
                   <h3 className="text-xl font-semibold text-slate-900">{service.name}</h3>
@@ -111,7 +115,7 @@ export default function HomePage() {
             {industries.map((industry, index) => (
               <Reveal key={industry.slug} delay={70 * index}>
                 <Link
-                  href={`/industries/${industry.slug}`}
+                  href={getIndustryPath(industry.slug)}
                   className="surface-panel block rounded-2xl p-5 transition-transform duration-200 hover:-translate-y-1 hover:border-teal-300"
                 >
                   <h3 className="text-xl font-semibold text-slate-900">{industry.name}</h3>
@@ -130,6 +134,56 @@ export default function HomePage() {
               See all industries &rarr;
             </Link>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="page-section bg-[linear-gradient(180deg,#f9fffd_0%,#eef9f6_100%)]">
+        <div className="content-shell-wide section-pad-compact">
+          <Reveal>
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-3xl">
+                <p className="marketing-kicker text-teal-700">Insights</p>
+                <h2 className="marketing-section-title mt-4 font-bold text-slate-900">
+                  Blog Corner
+                </h2>
+                <p className="marketing-body mt-4 text-slate-600">
+                  Short writing on the engineering and workflow decisions that shape useful
+                  software systems.
+                </p>
+              </div>
+              <Link
+                href="/blog"
+                className="font-semibold text-teal-700 transition-colors duration-200 hover:text-teal-800"
+              >
+                Visit the blog &rarr;
+              </Link>
+            </div>
+          </Reveal>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {latestPosts.map((post, index) => (
+              <Reveal key={post.slug} delay={70 * index}>
+                <Link
+                  href={getBlogPath(post.slug)}
+                  className="surface-panel-strong block rounded-[1.6rem] p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-teal-300"
+                >
+                  <div className="text-sm font-medium text-slate-500">
+                    <time dateTime={post.publishedAt}>
+                      {new Date(post.publishedAt).toLocaleDateString("en-IN", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </time>
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold text-slate-900">{post.title}</h3>
+                  <p className="marketing-support mt-3 text-slate-600">{post.excerpt}</p>
+                  <span className="mt-5 inline-block text-base font-semibold text-teal-700">
+                    Read more &rarr;
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

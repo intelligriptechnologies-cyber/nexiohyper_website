@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { JsonLd } from "@/components/JsonLd";
+import { localBusinessJsonLd } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/metadata";
 import { formatAddress, siteConfig } from "@/lib/site-config";
 
@@ -13,6 +15,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <section className="page-section surface-mist">
+      <JsonLd data={localBusinessJsonLd()} />
       <div className="content-shell section-pad-compact">
         <div className="max-w-4xl">
           <p className="marketing-kicker text-teal-700">Contact</p>

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getIndustryPath, getProductPath, getServicePath } from "@/lib/routes";
 import { siteConfig } from "@/lib/site-config";
 import { industries } from "@/lib/industries-data";
 import { products } from "@/lib/products-data";
 import { services } from "@/lib/services-data";
 
 export function Footer() {
-  const whatsappNumber = siteConfig.phone.replace(/\D+/g, "");
+  const whatsappNumber = siteConfig.whatsapp.replace(/\D+/g, "");
   const socialLinks = [
     {
       label: "LinkedIn",
@@ -53,10 +54,10 @@ export function Footer() {
           <div className="max-w-md">
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="/icons/nh_logo_gradient_20260828.png"
+                src="/icons/logo-primary-stacked-2048.png"
                 alt={`${siteConfig.name} logo`}
-                width={587}
-                height={425}
+                width={2048}
+                height={1105}
                 className="h-auto w-36 sm:w-40"
               />
             </Link>
@@ -85,7 +86,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="transition-colors duration-200 hover:text-teal-700"
                 >
-                  {siteConfig.phone}
+                  {siteConfig.whatsapp}
                 </a>
               </p>
             </div>
@@ -101,7 +102,7 @@ export function Footer() {
               {services.map((service) => (
                 <li key={service.slug}>
                   <Link
-                    href={`/services/${service.slug}`}
+                    href={getServicePath(service.slug)}
                     className="transition-colors duration-200 hover:text-teal-700"
                   >
                     {service.name}
@@ -121,7 +122,7 @@ export function Footer() {
               {products.map((product) => (
                 <li key={product.slug}>
                   <Link
-                    href={`/products/${product.slug}`}
+                    href={getProductPath(product.slug)}
                     className="transition-colors duration-200 hover:text-teal-700"
                   >
                     {product.name}
@@ -131,17 +132,32 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <Link
-              href="/industries"
-              className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900 transition-colors duration-200 hover:text-teal-700"
-            >
-              Industries
-            </Link>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900">
+              Company
+            </p>
             <ul className="mt-4 grid gap-2.5 text-[1rem] leading-7 text-slate-600">
+              <li>
+                <Link href="/about" className="transition-colors duration-200 hover:text-teal-700">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="transition-colors duration-200 hover:text-teal-700">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/industries"
+                  className="transition-colors duration-200 hover:text-teal-700"
+                >
+                  Industries
+                </Link>
+              </li>
               {industries.map((industry) => (
                 <li key={industry.slug}>
                   <Link
-                    href={`/industries/${industry.slug}`}
+                    href={getIndustryPath(industry.slug)}
                     className="transition-colors duration-200 hover:text-teal-700"
                   >
                     {industry.name}
@@ -162,7 +178,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit NexioHyper on ${social.label}`}
-                  className="inline-flex h-10 w-10 items-center justify-center bg-slate-900 text-white transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-teal-700"
+                  className="inline-flex h-10 w-10 items-center justify-center bg-[#13253c] text-white transition-[background-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-teal-700 hover:shadow-[0_14px_30px_rgba(15,23,42,0.18)]"
                 >
                   {social.icon}
                 </a>
